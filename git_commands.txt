@@ -1,0 +1,110 @@
+Hello
+Hi there! this is conlin
+
+git version
+
+git config --global user.name "conlin wang"
+
+git config --global user.email "conlinw@gmail.com"
+
+git config --global --list
+
+git clone remote_location clone_name
+	Ex: git clone science-quizzes my-quizzes
+	Ex: git clone https://github.com/conlinwang/github_demo.git
+
+
+git init: creates a new Git repository
+	Ex: git init
+
+git status: inspects the contents of the working directory and staging area
+	Ex: git status
+
+git add: adds files from the working directory to the staging area
+	Ex: git add conlin.txt (for signle file)
+	Ex: git add filename_1 filename_2 (for multiple files)
+
+git diff: shows the difference between the working directory and the staging area
+	Ex: git diff conlin.txt
+
+git commit: permanently stores file changes from the staging area in the repository
+	Ex: git commit -m "Your Message here"
+	Ex: git commit -m "Adding start text file"
+
+git push origin master
+
+git log: shows a list of all previous 
+	Ex: git log 
+
+git show HEAD: In Git, the commit you are currently on is known as the HEAD commit. In many cases, the most recently made commit is the HEAD commit.
+	Ex: git show HEAD
+
+You may need to press q on your keyboard to restore the terminal.
+
+git checkout HEAD filename: will restore the file in your working directory to look exactly as it did when you last made a commit.
+	Ex: git checkout HEAD conlin.txt
+	
+git reset SHA:
+	git log
+		commit "c43fb82"c916c607e969373d97e0f4d299d108420
+	git reset c43fb82
+
+git branch: to check which branch am I on, Lists all a Git project's branches.
+	Ex: which branch am I on
+
+git branch branch_name: Creates a new branch, name as "branch_name"
+	Ex: git branch new_branch_conlin
+
+git checkout branch_name: to switch to the other branch, Used to switch from one branch to another.
+	Ex: git checkout "branch_name" (branch_name is the place you wish to go)
+
+git merge branch_name: Used to join file changes from one branch to another.
+	Ex: git merge "branch_name" (branch_name is the source you wish become the master one)
+
+git branch -d branch_name: delete a branch. Deletes the branch specified.
+	Ex: git branch -d branch_name
+
+git clone remote_location clone_name
+	Ex: git clone science-quizzes my-quizzes
+
+git remote -v
+	Ex: 
+
+git fetch: This command will not merge changes from the remote into your local repository
+	Ex : git fetch
+
+
+git merge origin/master:
+	Ex: git merge origin/master
+
+1. Fetch and merge changes from the remote
+2. Create a branch to work on a new project feature
+3. Develop the feature on your branch and commit your work
+4. Fetch and merge from the remote again (in case new commits were made while you were working)
+5. Push your branch up to the remote for review	
+
+
+git clone: Creates a local copy of a remote.
+git remote -v: Lists a Git project's remotes.
+git fetch: Fetches work from the remote into the local copy.
+git merge origin/master: Merges origin/master into your local branch.
+git push origin <branch_name>: Pushes a local branch to the origin remote.
+
+
+git version
+git config --global user.name "Abe Lincoln"
+git config --global user.email "mrabe@git.training"
+git config --global --list
+git clone github-https-url # paste in your GitHub HTTPS clone URL ls
+cd github-demo
+ls
+git status
+echo "Test Git Quick Start demo" >> start.txt
+ls
+cat start.txt
+git status
+git add start.txt
+git status
+git commit -m "Adding start text file"
+git status
+git push origin master
