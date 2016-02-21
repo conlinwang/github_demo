@@ -7,6 +7,10 @@ git config --global user.name "conlin wang"
 
 git config --global user.email "conlinw@gmail.com"
 
+git config --global alias.hist "log --all --graph --decorate --oneline"
+
+vim ~/.gitconfig
+
 git config --global --list
 
 git clone remote_location clone_name
@@ -16,6 +20,7 @@ git clone remote_location clone_name
 
 git init: creates a new Git repository
 	Ex: git init
+	Ex: git init fresh_project
 
 git status: inspects the contents of the working directory and staging area
 	Ex: git status
@@ -23,6 +28,15 @@ git status: inspects the contents of the working directory and staging area
 git add: adds files from the working directory to the staging area
 	Ex: git add conlin.txt (for signle file)
 	Ex: git add filename_1 filename_2 (for multiple files)
+	Ex: 
+
+git add .  
+	To add all the files into staging area
+	Ex: git add .
+
+git add -A
+
+git add -u
 
 git diff: shows the difference between the working directory and the staging area
 	Ex: git diff conlin.txt
@@ -30,14 +44,32 @@ git diff: shows the difference between the working directory and the staging are
 git commit: permanently stores file changes from the staging area in the repository
 	Ex: git commit -m "Your Message here"
 	Ex: git commit -m "Adding start text file"
+	Ex: git commit -am "Adding start text file"  add and commit once
+
+git ls-files
+
+git pull origin master
 
 git push origin master
+
 
 git log: shows a list of all previous 
 	Ex: git log 
 
+git log --abbrev-commit
+
+git log --oneline --graph --decorate
+
+git log XXXXX...XXXXX
+
+git log --since="3 days ago"
+
+git log --follow -- level1/level2
+
 git show HEAD: In Git, the commit you are currently on is known as the HEAD commit. In many cases, the most recently made commit is the HEAD commit.
 	Ex: git show HEAD
+
+git show ID
 
 You may need to press q on your keyboard to restore the terminal.
 
@@ -48,6 +80,33 @@ git reset SHA:
 	git log
 		commit "c43fb82"c916c607e969373d97e0f4d299d108420
 	git reset c43fb82
+
+git reset HEAD fileanme
+
+git checkout -- filename
+
+git mv the_current_filename the_new_filename
+
+git branch -a: the current status of branch a for all
+	Ex: git branch -a
+
+
+git branch -m : to rename a branch m is move
+	Ex: git branch -m my_new_branch new_branch
+
+git branch -d, delete a branch
+	Ex: git branch -d newbranch
+
+git branch my_new_branch
+
+git checkout my_new_branch
+
+git checkout -b title_change
+
+git merge:	
+	Ex: git merge title_change
+
+
 
 git branch: to check which branch am I on, Lists all a Git project's branches.
 	Ex: which branch am I on
@@ -66,6 +125,7 @@ git branch -d branch_name: delete a branch. Deletes the branch specified.
 
 git clone remote_location clone_name
 	Ex: git clone science-quizzes my-quizzes
+	Ex: git clone https://github.com/conlinwang/starter-web.git 
 
 git remote -v
 	Ex: 

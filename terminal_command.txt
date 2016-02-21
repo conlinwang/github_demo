@@ -1,0 +1,6 @@
+terminal_command.txt
+rm -rf : to delete a whole folder
+
+clear
+pwd
+mkdir -p level1/level2/level3/level5
